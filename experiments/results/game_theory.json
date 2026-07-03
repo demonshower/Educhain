@@ -1,0 +1,16 @@
+{
+  "honest_proposer_ev": 0.0,
+  "shirker_ev": -0.06499999999999984,
+  "valid_challenger_ev": 1.0,
+  "false_challenger_ev": -0.95,
+  "honesty_dominates": true,
+  "sybil_cost_eth": 2.0,
+  "parameters": {
+    "alpha": 1.5,
+    "p_detect": 0.7,
+    "p_arb_correct": 0.95,
+    "audit_cost": 2.0,
+    "poc_cost": 0.5,
+    "min_stake": 1.0
+  }
+}

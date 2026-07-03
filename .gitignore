@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+lib/
+
+# Build output
+frontend/dist/
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment & secrets
+.env
+config.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated plots
+experiments/plots/*.png
+
+# Experiment results (large, auto-generated)
+experiments/results/run_*/
+experiments/results/latest/
+
+# IDE
+.vscode/
+.idea/

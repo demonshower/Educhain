@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 200%;
+  }
+  body {
+    @apply antialiased bg-[#fbfbfd] text-[#1d1d1f] font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  /* Minimal scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-black/10 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-black/20;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2.5 bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full text-sm font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply px-5 py-2.5 bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] rounded-full text-sm font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .card {
+    @apply bg-white rounded-3xl p-7 shadow-apple-sm transition-all duration-300;
+  }
+  .card-hover {
+    @apply card hover:shadow-apple-md hover:-translate-y-0.5;
+  }
+  .input {
+    @apply w-full px-4 py-3 bg-[#f5f5f7] rounded-xl text-[#1d1d1f] placeholder-[#86868b] focus:outline-none focus:ring-2 focus:ring-[#0071e3]/30 focus:bg-white transition-all duration-200 text-sm;
+  }
+  .label {
+    @apply block text-sm font-medium text-[#6e6e73] mb-1.5;
+  }
+  .section-title {
+    @apply text-[72px] font-bold tracking-tight text-[#1d1d1f];
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+  }
+  .badge-blue {
+    @apply badge bg-[#0071e3]/10 text-[#0071e3];
+  }
+  .badge-green {
+    @apply badge bg-[#34c759]/10 text-[#34c759];
+  }
+  .badge-orange {
+    @apply badge bg-[#ff9f0a]/10 text-[#ff9f0a];
+  }
+  .badge-red {
+    @apply badge bg-[#ff3b30]/10 text-[#ff3b30];
+  }
+  .badge-gray {
+    @apply badge bg-[#86868b]/10 text-[#86868b];
+  }
+  /* Legacy badge aliases for compatibility */
+  .badge-cyan {
+    @apply badge-blue;
+  }
+  .badge-emerald {
+    @apply badge-green;
+  }
+  .badge-amber {
+    @apply badge-orange;
+  }
+  .badge-rose {
+    @apply badge-red;
+  }
+  .badge-violet {
+    @apply badge bg-purple-500/10 text-purple-600;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#0071e3] to-[#34c759] bg-clip-text text-transparent;
+  }
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.02) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,74 @@
+{
+    "sandbox_config": {
+        "timeout_seconds": 60,
+        "max_memory_mb": 2048,
+        "max_cpus": 2,
+        "network_access": false,
+        "filesystem_readonly": true,
+        "allowed_commands": ["forge", "cast", "anvil"],
+        "isolation_mode": "namespace"
+    },
+    "arbitration_config": {
+        "min_committee_size": 3,
+        "vrf_seed_source": "block.prevrandao",
+        "min_reputation_threshold": 200,
+        "quorum_percentage": 67
+    },
+    "economic_parameters": {
+        "alpha": 0.6,
+        "default_challenge_period_hours": 48,
+        "min_submitter_stake_credits": 1.0,
+        "min_challenger_stake_credits": 1.0,
+        "min_proposer_stake_eth": 1.0,
+        "score_threshold": 50,
+        "slash_threshold": 30,
+        "reviewer_reward_percent": 10,
+        "verifier_reward_percent": 10,
+        "reputation_reward_finalize": 10,
+        "reputation_penalty_slashed": -50,
+        "reputation_reward_challenge_win": 20,
+        "reputation_penalty_challenge_loss": -30
+    },
+    "stake_oracle_parameters": {
+        "p_detect": 0.7,
+        "p_arb_correct": 0.95,
+        "honest_effort_cost": 2.0,
+        "cheat_effort_cost": 0.1,
+        "evidence_generation_cost": 0.5,
+        "audit_cost_eth": 2.0,
+        "audit_cost_prime_eth": 0.1,
+        "poc_cost_eth": 0.5
+    },
+    "ipfs_config": {
+        "gateway": "https://ipfs.io/ipfs/",
+        "pin_service": "pinata",
+        "max_evidence_size_mb": 50
+    },
+    "llm_config": {
+        "model_type": "api",
+        "base_url": "https://api.deepseek.com/v1",
+        "api_key": "${LLM_API_KEY}",
+        "model": "deepseek-chat",
+        "model_path": "",
+        "max_tokens": 2048,
+        "temperature": 0.3,
+        "top_p": 0.9,
+        "repetition_penalty": 1.1,
+        "device": "auto"
+    },
+    "education_config": {
+        "assignment_types": ["code", "report", "mixed"],
+        "review_dimensions": ["completeness", "correctness", "code_style", "innovation"],
+        "plagiarism_threshold": 0.8,
+        "min_peer_reviewers": 3,
+        "max_score": 100
+    },
+    "rationality_parameters": {
+        "min_depth_level": 1,
+        "default_depth_level": 1,
+        "p_plagiarism_prior": 0.1,
+        "reputation_point_value": 0.01,
+        "min_challenge_confidence": 0.75,
+        "default_reward_when_unspecified": 2.0
+    }
+}
