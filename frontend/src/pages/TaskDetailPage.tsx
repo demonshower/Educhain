@@ -345,7 +345,6 @@ export default function TaskDetailPage() {
           <Field label="Trace Root" value={proposal.traceRoot} mono />
           <Field label="Evidence CID" value={proposal.evidenceCID} />
           <Field label="Stake" value={`${formatEther(proposal.stake)} 学分`} />
-          <Field label="Score Count" value={String(proposal.scoreCount)} />
         </div>
       </div>
     );

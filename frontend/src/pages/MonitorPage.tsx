@@ -45,26 +45,27 @@ const TABS: { id: TabId; label: string; icon: React.ReactNode }[] = [
 ];
 
 const PROTOCOL_FLOW = [
-  { step: 1, icon: <FileCode2 size={22} />, title: '发布任务', desc: '提交作业代码与奖励池', color: '#0071e3', bg: 'bg-[#0071e3]/10' },
-  { step: 2, icon: <Brain size={22} />, title: 'AI 评审', desc: 'AI 评审代理分析与质押提交', color: '#5856d6', bg: 'bg-[#5856d6]/10' },
-  { step: 3, icon: <AlertTriangle size={22} />, title: '争议窗口', desc: '48 小时内提交验证证据争议', color: '#ff9f0a', bg: 'bg-[#ff9f0a]/10' },
-  { step: 4, icon: <Scale size={22} />, title: '沙箱仲裁', desc: 'VRF 委员会沙箱重放', color: '#ff3b30', bg: 'bg-[#ff3b30]/10' },
-  { step: 5, icon: <Vote size={22} />, title: '达成法定人数', desc: '委员会 67% 多数裁决', color: '#34c759', bg: 'bg-[#34c759]/10' },
-  { step: 6, icon: <CheckCircle2 size={22} />, title: '最终确认', desc: '奖励发放与激励对齐', color: '#34c759', bg: 'bg-[#34c759]/10' },
+  { step: 1, icon: <FileCode2 size={22} />, title: '教师发布', desc: '布置编程作业与评分标准', color: '#0071e3', bg: 'bg-[#0071e3]/10' },
+  { step: 2, icon: <Brain size={22} />, title: 'AI + 同行评审', desc: 'AI 自动审查 + 多位同行打分', color: '#5856d6', bg: 'bg-[#5856d6]/10' },
+  { step: 3, icon: <AlertTriangle size={22} />, title: '争议窗口', desc: '48h 内可对评审结果提出质疑', color: '#ff9f0a', bg: 'bg-[#ff9f0a]/10' },
+  { step: 4, icon: <Scale size={22} />, title: '仲裁裁决', desc: '学术委员会审查证据并投票', color: '#ff3b30', bg: 'bg-[#ff3b30]/10' },
+  { step: 5, icon: <Vote size={22} />, title: '达成共识', desc: '委员会 67% 多数形成决议', color: '#34c759', bg: 'bg-[#34c759]/10' },
+  { step: 6, icon: <CheckCircle2 size={22} />, title: '学分结算', desc: '奖学金/惩罚自动执行，信誉更新', color: '#34c759', bg: 'bg-[#34c759]/10' },
 ];
 
 const KEY_FEATURES = [
-  { icon: <Layers size={20} />, title: '乐观执行', desc: '提案默认被接受，仅在有经济动机支撑时才触发争议流程。', color: '#0071e3' },
-  { icon: <Brain size={20} />, title: 'LLM 驱动的评审者', desc: 'AI 评审代理（GPT-4o、Claude、DeepSeek）质押学分竞争评审奖励，激励对齐。', color: '#5856d6' },
-  { icon: <Shield size={20} />, title: '语义争议解决', desc: '通过沙箱重放（Foundry）+ VRF 委员会 + 链上 EIP-712 签名投票解决争议。', color: '#ff3b30' },
-  { icon: <Lock size={20} />, title: '质押加权声誉', desc: '参与者声誉与权重由质押金额决定，不诚实行为将被惩罚罚没。', color: '#ff9f0a' },
-  { icon: <Cpu size={20} />, title: '链上预言机参数', desc: 'StakeOracle 合约管理 p_detect、p_arb、评审成本等经济均衡参数。', color: '#34c759' },
-  { icon: <TrendingUp size={20} />, title: '纳什均衡设计', desc: '系统参数经校准，确保诚实报告是理性参与者的严格占优策略。', color: '#ff9f0a' },
+  { icon: <Layers size={20} />, title: '乐观评审', desc: '作业默认通过，仅在有人提出质疑时才进入仲裁流程，减少不必要开销。', color: '#0071e3' },
+  { icon: <Brain size={20} />, title: 'AI 智能评审', desc: 'AI 自动分析代码质量、正确性、规范性，识别抄袭痕迹并提供改进建议。', color: '#5856d6' },
+  { icon: <Shield size={20} />, title: '学术争议仲裁', desc: '抄袭指控由学术委员会审查验证代码后投票裁决，全程链上存证不可篡改。', color: '#ff3b30' },
+  { icon: <Lock size={20} />, title: '学分质押与信誉', desc: '学生和评审者质押学分参与，不诚实行为会被罚没学分并降低学术信誉。', color: '#ff9f0a' },
+  { icon: <Cpu size={20} />, title: '博弈论激励机制', desc: '系统参数经博弈论标定，确保诚实学习和公正评审是每个参与者的最优策略。', color: '#34c759' },
+  { icon: <TrendingUp size={20} />, title: '数据不可篡改', desc: '所有评审记录、争议证据、仲裁结果均通过区块链存证，永久可追溯可验证。', color: '#ff9f0a' },
 ];
 
 const statusConfig = {
   [TaskStatus.Open]: { variant: 'info' as const, icon: <Circle size={12} /> },
   [TaskStatus.Proposed]: { variant: 'warning' as const, icon: <Clock size={12} /> },
+  [TaskStatus.InReview]: { variant: 'info' as const, icon: <Clock size={12} /> },
   [TaskStatus.Challenged]: { variant: 'error' as const, icon: <AlertTriangle size={12} /> },
   [TaskStatus.Finalized]: { variant: 'success' as const, icon: <CheckCircle2 size={12} /> },
   [TaskStatus.Slashed]: { variant: 'error' as const, icon: <XCircle size={12} /> },
@@ -342,7 +343,7 @@ function OverviewTab({ wallet, onTabChange }: { wallet: ReturnType<typeof useWal
             <>
               <StatusRow label="后端 API" value={backendStatus.status} ok={backendStatus.status === 'ok'} />
               <StatusRow label="AI 评审代理运行时" value={backendStatus.agent_loaded ? '已加载' : '未加载'} ok={backendStatus.agent_loaded} />
-              <StatusRow label="沙箱（Foundry）" value="可用" ok={true} />
+              <StatusRow label="沙箱验证引擎" value="可用" ok={true} />
             </>
           ) : (
             <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#ff3b30]/5 sm:col-span-3">
@@ -412,6 +413,7 @@ function TasksTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
     all: dispute.tasks.length,
     [TaskStatus.Open]: dispute.tasks.filter(t => t.status === TaskStatus.Open).length,
     [TaskStatus.Proposed]: dispute.tasks.filter(t => t.status === TaskStatus.Proposed).length,
+    [TaskStatus.InReview]: dispute.tasks.filter(t => t.status === TaskStatus.InReview).length,
     [TaskStatus.Challenged]: dispute.tasks.filter(t => t.status === TaskStatus.Challenged).length,
     [TaskStatus.Finalized]: dispute.tasks.filter(t => t.status === TaskStatus.Finalized).length,
     [TaskStatus.Slashed]: dispute.tasks.filter(t => t.status === TaskStatus.Slashed).length,
@@ -436,6 +438,7 @@ function TasksTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
           { value: -1 as const, label: '全部', count: statusCounts.all },
           { value: TaskStatus.Open, label: '开放', count: statusCounts[TaskStatus.Open] },
           { value: TaskStatus.Proposed, label: '已提案', count: statusCounts[TaskStatus.Proposed] },
+          { value: TaskStatus.InReview, label: '评审中', count: statusCounts[TaskStatus.InReview] },
           { value: TaskStatus.Challenged, label: '有争议', count: statusCounts[TaskStatus.Challenged] },
           { value: TaskStatus.Finalized, label: '已确认', count: statusCounts[TaskStatus.Finalized] },
           { value: TaskStatus.Slashed, label: '已罚没', count: statusCounts[TaskStatus.Slashed] },
@@ -454,8 +457,8 @@ function TasksTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
           <h3 className="text-lg font-semibold text-[#1d1d1f]">Publish New Assignment</h3>
           <p className="text-sm text-[#86868b]">Submit assignment code for quality review. Participants will compete to provide the best analysis.</p>
           <div>
-            <label className="label">Source Code (Solidity)</label>
-            <textarea value={sourceCode} onChange={e => handleSourceChange(e.target.value)} placeholder="// SPDX-License-Identifier: MIT&#10;pragma solidity ^0.8.0;&#10;&#10;contract MyContract {&#10;    // Paste your contract here...&#10;}" className="input h-40 resize-y font-mono text-xs" />
+            <label className="label">作业代码</label>
+            <textarea value={sourceCode} onChange={e => handleSourceChange(e.target.value)} placeholder={`// 请在此粘贴学生提交的作业代码&#10;// 例如：Python 冒泡排序实现&#10;&#10;def bubble_sort(arr):&#10;    n = len(arr)&#10;    for i in range(n):&#10;        for j in range(n - i - 1):&#10;            if arr[j] > arr[j + 1]:&#10;                arr[j], arr[j + 1] = arr[j + 1], arr[j]`} className="input h-40 resize-y font-mono text-xs" />
             <p className="text-xs text-[#86868b] mt-1.5">Code hash will be auto-generated from source</p>
           </div>
           <div>
@@ -512,7 +515,7 @@ function TasksTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
               return (
                 <motion.div key={task.id} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.03 }}>
                   <Link to={`/tasks/${task.id}`} className="card-hover block group relative overflow-hidden">
-                    <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-3xl ${task.status === TaskStatus.Open ? 'bg-[#0071e3]' : task.status === TaskStatus.Proposed ? 'bg-[#ff9f0a]' : task.status === TaskStatus.Challenged ? 'bg-[#ff3b30]' : task.status === TaskStatus.Finalized ? 'bg-[#34c759]' : 'bg-[#ff3b30]'}`} />
+                    <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-3xl ${task.status === TaskStatus.Open ? 'bg-[#0071e3]' : task.status === TaskStatus.Proposed ? 'bg-[#ff9f0a]' : task.status === TaskStatus.InReview ? 'bg-[#5856d6]' : task.status === TaskStatus.Challenged ? 'bg-[#ff3b30]' : task.status === TaskStatus.Finalized ? 'bg-[#34c759]' : 'bg-[#ff3b30]'}`} />
                     <div className="flex items-center justify-between pl-3">
                       <span className="font-mono text-sm text-[#1d1d1f] group-hover:text-[#0071e3] transition-colors">{shortenAddress(task.id)}</span>
                       <StatusBadge variant={config.variant} icon={config.icon}>{getStatusLabel(task.status)}</StatusBadge>

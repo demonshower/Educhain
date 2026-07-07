@@ -163,7 +163,7 @@ class AuditStrategy:
 # ============ LLM Client ============
 
 class LLMClient:
-    """Anthropic-compatible API client for DeepSeek V4 Flash."""
+    """Anthropic-compatible API client for DeepSeek / LLM providers."""
 
     def __init__(self, config: Optional[LLMConfig] = None):
         self.config = config or LLMConfig()
@@ -196,11 +196,17 @@ class LLMClient:
 
     def _extract_text(self, data: dict) -> str:
         """Extract text from Anthropic response, skipping thinking blocks."""
-        if "content" not in data:
-            return ""
-        for item in data["content"]:
-            if isinstance(item, dict) and item.get("type") == "text":
-                return item.get("text", "")
+        if "content" in data:
+            for item in data["content"]:
+                if isinstance(item, dict) and item.get("type") == "text":
+                    return item.get("text", "").strip()
+        # Fallback: try OpenAI format
+        if "choices" in data and len(data["choices"]) > 0:
+            choice = data["choices"][0]
+            msg = choice.get("message", {})
+            content = msg.get("content", "")
+            if content:
+                return content.strip()
         return ""
 
     @staticmethod
@@ -221,7 +227,7 @@ class LLMClient:
         json_mode: bool = False,
     ) -> str:
         """Send a chat completion request using Anthropic Messages API format."""
-        # Extract system message and build user/assistant messages
+        # Extract system message; Anthropic puts it as a top-level field
         system_prompt = ""
         api_messages = []
         for msg in messages:
@@ -240,7 +246,7 @@ class LLMClient:
         if system_prompt:
             payload["system"] = system_prompt
 
-        # Anthropic API doesn't have response_format; append JSON instruction to last message
+        # Append JSON instruction to last message if needed
         if json_mode and api_messages:
             last_msg = api_messages[-1]
             if isinstance(last_msg["content"], str):
@@ -255,7 +261,6 @@ class LLMClient:
             if not text:
                 print(f"[LLM] WARNING: no text content, types: {[c.get('type','?') for c in data.get('content',[])]}")
                 return ""
-            # Strip markdown wrappers if present
             text = self._strip_markdown(text)
             return text
         except requests.exceptions.RequestException as e:
@@ -956,12 +961,22 @@ Requirements:
 - Function must be named testExploit()"""
 
         poc_code = self.llm.ask(prompt, system=POC_SYSTEM_PROMPT)
+        print(f"[Agent {self.agent_id}] LLM raw response length: {len(poc_code)}")
 
         # Extract Solidity code from markdown if wrapped
         poc_code = self._extract_solidity(poc_code)
+        print(f"[Agent {self.agent_id}] After extract: {len(poc_code)} chars")
 
-        # Compiler-in-the-loop: iterations driven by strategy
-        poc_code = self._compiler_loop(poc_code, max_iterations=strategy.compiler_loop_iterations)
+        if not poc_code:
+            print(f"[Agent {self.agent_id}] ERROR: LLM returned empty PoC code!")
+            return ""
+
+        # Compiler-in-the-loop: iterations driven by strategy (skip if forge unavailable)
+        try:
+            subprocess.run(["forge", "--version"], capture_output=True, timeout=5)
+            poc_code = self._compiler_loop(poc_code, max_iterations=strategy.compiler_loop_iterations)
+        except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+            print(f"[Agent {self.agent_id}] forge not available, skipping compilation check")
 
         return poc_code
 

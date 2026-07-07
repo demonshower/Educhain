@@ -7,7 +7,13 @@ arbitration evaluation, and peer review scoring via REST API.
 
 import json
 import os
+import sys
 from pathlib import Path
+
+# Ensure project root is in sys.path for absolute imports
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
 
 from dotenv import load_dotenv
 from fastapi import FastAPI

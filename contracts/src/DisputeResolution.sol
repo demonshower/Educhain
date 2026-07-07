@@ -127,12 +127,14 @@ contract DisputeResolution {
 
     /// @notice Set the arbitration committee contract (one-time setup)
     function setArbitrationCommittee(address _committee) external {
+        require(msg.sender == owner, "Dispute: not owner");
         require(address(arbitrationCommittee) == address(0), "Dispute: committee already set");
         arbitrationCommittee = ArbitrationCommittee(_committee);
     }
 
     /// @notice Set the stake oracle contract (one-time setup)
     function setStakeOracle(address _oracle) external {
+        require(msg.sender == owner, "Dispute: not owner");
         require(address(stakeOracle) == address(0), "Dispute: oracle already set");
         stakeOracle = StakeOracle(_oracle);
     }

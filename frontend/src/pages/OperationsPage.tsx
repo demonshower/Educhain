@@ -34,8 +34,8 @@ export default function OperationsPage() {
         {/* Page Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-4xl font-bold text-[#1d1d1f] tracking-tight">协议操作</h2>
-            <p className="text-lg text-[#86868b] mt-1">与 AI 评审代理交互并管理争议仲裁</p>
+            <h2 className="text-4xl font-bold text-[#1d1d1f] tracking-tight">学术诚信操作台</h2>
+            <p className="text-lg text-[#86868b] mt-1">AI 作业评审、抄袭验证、争议仲裁与评分管理</p>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ interface PanelConfig {
 
 const panels: PanelConfig[] = [
   { id: 'audit', title: '质量评审', description: 'LLM 问题分析', icon: <Brain size={32} />, color: 'cyan', endpoint: '' },
-  { id: 'poc', title: '验证证据生成', description: '生成 Foundry 问题验证代码', icon: <Zap size={32} />, color: 'amber', endpoint: '' },
+  { id: 'poc', title: '验证证据生成', description: '生成可执行抄袭验证代码', icon: <Zap size={32} />, color: 'amber', endpoint: '' },
   { id: 'arbitration', title: '仲裁评估', description: 'AI 委员会投票推理', icon: <Shield size={32} />, color: 'violet', endpoint: '' },
   { id: 'score', title: '评审评分', description: '计算评审质量验证分', icon: <BarChart3 size={32} />, color: 'emerald', endpoint: '' },
   { id: 'sandbox', title: '沙箱重放', description: '在隔离环境中执行验证证据', icon: <Play size={32} />, color: 'rose', endpoint: '' },
@@ -268,9 +268,9 @@ function AuditPanel({ codeHash, setCodeHash, source, setSource, constraints, set
   return (
     <div className="space-y-4">
       <h3 className="font-semibold text-lg flex items-center gap-2 text-[#1d1d1f]"><Brain size={18} className="text-[#0071e3]" /> 质量评审</h3>
-      <div><label className="label">代码哈希</label><input type="text" value={codeHash} onChange={e => setCodeHash(e.target.value)} className="input font-mono" placeholder="0x..." /></div>
-      <div><label className="label">作业源码（Solidity）</label><textarea value={source} onChange={e => setSource(e.target.value)} className="input h-40 resize-y font-mono text-xs" placeholder="// SPDX-License-Identifier: MIT&#10;pragma solidity ^0.8.0;&#10;..." /></div>
-      <div><label className="label">约束条件（逗号分隔）</label><input type="text" value={constraints} onChange={e => setConstraints(e.target.value)} className="input" placeholder="no-reentrancy, no-oracle-manipulation" /></div>
+      <div><label className="label">作业编号</label><input type="text" value={codeHash} onChange={e => setCodeHash(e.target.value)} className="input font-mono" placeholder="0x..." /></div>
+      <div><label className="label">作业源码</label><textarea value={source} onChange={e => setSource(e.target.value)} className="input h-40 resize-y font-mono text-xs" placeholder={`# 请在此粘贴学生提交的作业代码&#10;# 例如：Python 冒泡排序&#10;&#10;def bubble_sort(arr):&#10;    n = len(arr)&#10;    for i in range(n):&#10;        for j in range(n - i - 1):&#10;            if arr[j] > arr[j + 1]:&#10;                arr[j], arr[j + 1] = arr[j + 1], arr[j]&#10;    return arr`} /></div>
+      <div><label className="label">评分要求（逗号分隔）</label><input type="text" value={constraints} onChange={e => setConstraints(e.target.value)} className="input" placeholder="功能正确, 代码规范, 文档完整, 无抄袭" /></div>
       <SubmitButton loading={loading} label="运行评审" onClick={onSubmit} />
       {result && (
         <div className="space-y-3">
@@ -310,15 +310,15 @@ function PoCPanel({ vulnType, setVulnType, target, setTarget, desc, setDesc, onS
         <label className="label">问题类型</label>
         <select value={vulnType} onChange={e => setVulnType(e.target.value)} className="input">
           <option value="">选择类型...</option>
-          <option value="reentrancy">重入攻击</option>
-          <option value="oracle-manipulation">预言机操纵</option>
-          <option value="flash-loan">闪电贷攻击</option>
-          <option value="access-control">访问控制</option>
-          <option value="integer-overflow">整数溢出</option>
-          <option value="front-running">抢先交易</option>
+          <option value="plagiarism">疑似抄袭</option>
+          <option value="logic-error">逻辑错误</option>
+          <option value="incomplete">功能不完整</option>
+          <option value="constraint-violation">违反作业要求</option>
+          <option value="code-quality">代码质量差</option>
+          <option value="documentation">文档缺失</option>
         </select>
       </div>
-      <div><label className="label">目标作业代码（Solidity）</label><textarea value={target} onChange={e => setTarget(e.target.value)} className="input h-32 resize-y font-mono text-xs" placeholder="contract Target { ... }" /></div>
+      <div><label className="label">目标作业代码</label><textarea value={target} onChange={e => setTarget(e.target.value)} className="input h-32 resize-y font-mono text-xs" placeholder={`def bubble_sort(arr):&#10;    n = len(arr)&#10;    for i in range(n):&#10;        for j in range(n - i - 1):&#10;            if arr[j] > arr[j+1]:&#10;                arr[j], arr[j+1] = arr[j+1], arr[j]&#10;    return arr`} /></div>
       <div><label className="label">问题描述</label><textarea value={desc} onChange={e => setDesc(e.target.value)} className="input h-20 resize-y" placeholder="描述问题..." /></div>
       <SubmitButton loading={loading} label="生成验证证据" onClick={onSubmit} />
       {result && (
@@ -410,8 +410,8 @@ function SandboxPanel({ pocCode, setPocCode, contract, setContract, forkRpc, set
   return (
     <div className="space-y-4">
       <h3 className="font-semibold text-lg flex items-center gap-2 text-[#1d1d1f]"><Play size={18} className="text-[#ff3b30]" /> 沙箱重放</h3>
-      <div><label className="label">验证证据代码（Foundry 测试）</label><textarea value={pocCode} onChange={e => setPocCode(e.target.value)} className="input h-40 resize-y font-mono text-xs" placeholder="// SPDX-License-Identifier: MIT&#10;pragma solidity ^0.8.0;&#10;import &quot;forge-std/Test.sol&quot;;&#10;..." /></div>
-      <div><label className="label">作业源码</label><textarea value={contract} onChange={e => setContract(e.target.value)} className="input h-32 resize-y font-mono text-xs" placeholder="contract Target { ... }" /></div>
+      <div><label className="label">验证测试代码</label><textarea value={pocCode} onChange={e => setPocCode(e.target.value)} className="input h-40 resize-y font-mono text-xs" placeholder={`// 抄袭/错误验证测试代码&#10;// 用于在沙箱中运行比对验证&#10;&#10;import unittest&#10;&#10;class TestPlagiarism(unittest.TestCase):&#10;    def test_code_similarity(self):&#10;        # 验证两份代码的相似度是否超过阈值&#10;        self.assertTrue(check_similarity(code_a, code_b) > 0.8)`} /></div>
+      <div><label className="label">作业源码</label><textarea value={contract} onChange={e => setContract(e.target.value)} className="input h-32 resize-y font-mono text-xs" placeholder={`def bubble_sort(arr):&#10;    n = len(arr)&#10;    for i in range(n):&#10;        for j in range(n - i - 1):&#10;            if arr[j] > arr[j+1]:&#10;                arr[j], arr[j+1] = arr[j+1], arr[j]&#10;    return arr`} /></div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div><label className="label">Fork RPC（可选）</label><input type="text" value={forkRpc} onChange={e => setForkRpc(e.target.value)} className="input font-mono text-xs" placeholder="http://127.0.0.1:8545" /></div>
         <div><label className="label">Fork 区块（可选）</label><input type="number" value={forkBlock} onChange={e => setForkBlock(e.target.value)} className="input font-mono text-xs" placeholder="latest" /></div>
@@ -426,10 +426,10 @@ function SandboxPanel({ pocCode, setPocCode, contract, setContract, forkRpc, set
             <span className="text-xs text-[#86868b]">Exit code: {result.exit_code}</span>
           </div>
           <p className="text-xs text-[#1d1d1f] mb-2">{result.reason}</p>
-          <p className="text-xs text-[#86868b] font-mono break-all">Trace: {result.replay_trace_hash}</p>
+          <p className="text-xs text-[#86868b] font-mono break-all">验证哈希: {result.replay_trace_hash}</p>
           {result.output && (
             <details className="mt-2">
-              <summary className="text-xs text-[#86868b] cursor-pointer hover:text-[#1d1d1f]">Show forge output</summary>
+              <summary className="text-xs text-[#86868b] cursor-pointer hover:text-[#1d1d1f]">查看验证输出</summary>
               <pre className="text-xs text-[#6e6e73] mt-2 max-h-40 overflow-auto whitespace-pre-wrap font-mono bg-[#f5f5f7] p-2 rounded-xl">{result.output}</pre>
             </details>
           )}
@@ -448,7 +448,7 @@ function PickupPanel({ taskId, setTaskId, source, setSource, onSubmit, loading, 
       <h3 className="font-semibold text-lg flex items-center gap-2 text-[#1d1d1f]"><Cpu size={18} className="text-[#0071e3]" /> AI 评审代理承接任务</h3>
       <p className="text-xs text-[#86868b]">运行完整评审流水线：问题分析、状态根计算与提案决策。</p>
       <div><label className="label">任务 ID</label><input type="number" value={taskId} onChange={e => setTaskId(e.target.value)} className="input" placeholder="1" /></div>
-      <div><label className="label">作业源码（Solidity）</label><textarea value={source} onChange={e => setSource(e.target.value)} className="input h-40 resize-y font-mono text-xs" placeholder="// 完整作业源码..." /></div>
+      <div><label className="label">学生作业源码</label><textarea value={source} onChange={e => setSource(e.target.value)} className="input h-40 resize-y font-mono text-xs" placeholder={`# 粘贴学生完整作业代码&#10;# AI 将自动运行完整评审流水线&#10;&#10;def bubble_sort(arr):&#10;    n = len(arr)&#10;    for i in range(n):&#10;        ...`} /></div>
       <button type="button" onClick={onSubmit} disabled={loading || !source} className="btn-primary w-full flex items-center justify-center gap-2">
         {loading ? <><Loader2 size={16} className="animate-spin" /> 流水线运行中...</> : '运行完整评审流水线'}
       </button>
@@ -674,9 +674,9 @@ function ArbitrationTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
           {committee.length > 0 && (
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="card space-y-5">
               <h3 className="text-xl font-semibold text-[#1d1d1f] flex items-center gap-3"><Play size={22} /> 沙箱重放</h3>
-              <p className="text-base text-[#86868b]">在隔离 Foundry 沙箱中执行举报者的验证证据，验证问题是否可复现。</p>
-              <div><label className="label text-base">Verification Evidence (Solidity test)</label><textarea value={pocCode} onChange={e => setPocCode(e.target.value)} placeholder="// SPDX-License-Identifier: MIT..." className="input h-32 resize-y font-mono text-sm" /></div>
-              <div><label className="label text-base">Assignment Code (target)</label><textarea value={contractSource} onChange={e => setContractSource(e.target.value)} placeholder="// SPDX-License-Identifier: MIT..." className="input h-32 resize-y font-mono text-sm" /></div>
+              <p className="text-base text-[#86868b]">在隔离沙箱中运行验证测试代码，检查抄袭/错误是否可复现。</p>
+              <div><label className="label text-base">验证测试代码</label><textarea value={pocCode} onChange={e => setPocCode(e.target.value)} placeholder={`// 抄袭/错误验证测试代码&#10;def test_plagiarism():&#10;    ...`} className="input h-32 resize-y font-mono text-sm" /></div>
+              <div><label className="label text-base">被举报的学生作业代码</label><textarea value={contractSource} onChange={e => setContractSource(e.target.value)} placeholder={`def bubble_sort(arr):&#10;    ...`} className="input h-32 resize-y font-mono text-sm" /></div>
               <div className="grid grid-cols-2 gap-3">
                 <div><label className="label text-base">Fork RPC</label><input type="text" value={forkRpc} onChange={e => setForkRpc(e.target.value)} placeholder="http://127.0.0.1:8545" className="input font-mono text-sm py-3" /></div>
                 <div><label className="label text-base">Fork Block</label><input type="number" value={forkBlock} onChange={e => setForkBlock(e.target.value)} placeholder="latest" className="input font-mono text-sm py-3" /></div>
@@ -688,7 +688,7 @@ function ArbitrationTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
                     <span className={`text-base font-bold ${replayResult.verdict === 'CHALLENGE_UPHELD' ? 'text-[#ff3b30]' : 'text-[#34c759]'}`}>{replayResult.verdict}</span>
                   </div>
                   <p className="text-sm text-[#1d1d1f] mb-2">{replayResult.reason}</p>
-                  <p className="text-sm text-[#6e6e73]"><span className="text-[#86868b]">Trace:</span> <span className="font-mono">{replayResult.replay_trace_hash}</span></p>
+                  <p className="text-sm text-[#6e6e73]"><span className="text-[#86868b]">验证哈希:</span> <span className="font-mono">{replayResult.replay_trace_hash}</span></p>
                 </div>
               )}
             </motion.div>
@@ -699,11 +699,11 @@ function ArbitrationTab({ wallet }: { wallet: ReturnType<typeof useWallet> }) {
             <h3 className="text-xl font-semibold text-[#1d1d1f] mb-5">仲裁流程说明</h3>
             <ol className="space-y-4 text-base text-[#6e6e73]">
               {[
-                '举报者针对提案发起争议',
-                '从声誉 ≥ 200 的参与者中通过 VRF 随机选出委员会',
-                '委员会成员评估证据和验证证据重放结果',
-                '提交 EIP-712 签名投票（法定人数：67%）',
-                '裁决：争议成立则学生被罚没；否则举报者被罚没',
+                '举报者对作业评审结果发起学术争议',
+                '从学术信誉 ≥ 200 的师生中随机选出仲裁委员会',
+                '委员会成员审查验证证据和沙箱重放结果',
+                '委员会签名投票，需达到 67% 法定人数',
+                '裁决：争议成立则被举报学生罚没学分；否则举报者受罚',
               ].map((text, i) => (
                 <li key={i} className="flex gap-4">
                   <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0071e3]/10 flex items-center justify-center text-base text-[#0071e3] font-bold">{i + 1}</span>

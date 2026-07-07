@@ -1,9 +1,10 @@
 export enum TaskStatus {
   Open = 0,
   Proposed = 1,
-  Challenged = 2,
-  Finalized = 3,
-  Slashed = 4,
+  InReview = 2,
+  Challenged = 3,
+  Finalized = 4,
+  Slashed = 5,
 }
 
 export interface Agent {

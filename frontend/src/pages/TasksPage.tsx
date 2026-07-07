@@ -16,6 +16,7 @@ import type { useWallet } from '../hooks/useWallet';
 const statusConfig = {
   [TaskStatus.Open]: { variant: 'info' as const, icon: <Circle size={12} /> },
   [TaskStatus.Proposed]: { variant: 'warning' as const, icon: <Clock size={12} /> },
+  [TaskStatus.InReview]: { variant: 'info' as const, icon: <Clock size={12} /> },
   [TaskStatus.Challenged]: { variant: 'error' as const, icon: <AlertTriangle size={12} /> },
   [TaskStatus.Finalized]: { variant: 'success' as const, icon: <CheckCircle size={12} /> },
   [TaskStatus.Slashed]: { variant: 'error' as const, icon: <XCircle size={12} /> },
@@ -86,6 +87,7 @@ export default function TasksPage() {
     all: dispute.tasks.length,
     [TaskStatus.Open]: dispute.tasks.filter(t => t.status === TaskStatus.Open).length,
     [TaskStatus.Proposed]: dispute.tasks.filter(t => t.status === TaskStatus.Proposed).length,
+    [TaskStatus.InReview]: dispute.tasks.filter(t => t.status === TaskStatus.InReview).length,
     [TaskStatus.Challenged]: dispute.tasks.filter(t => t.status === TaskStatus.Challenged).length,
     [TaskStatus.Finalized]: dispute.tasks.filter(t => t.status === TaskStatus.Finalized).length,
     [TaskStatus.Slashed]: dispute.tasks.filter(t => t.status === TaskStatus.Slashed).length,
@@ -111,6 +113,7 @@ export default function TasksPage() {
             { value: -1 as const, label: 'All', count: statusCounts.all },
             { value: TaskStatus.Open, label: 'Open', count: statusCounts[TaskStatus.Open] },
             { value: TaskStatus.Proposed, label: 'Proposed', count: statusCounts[TaskStatus.Proposed] },
+            { value: TaskStatus.InReview, label: 'In Review', count: statusCounts[TaskStatus.InReview] },
             { value: TaskStatus.Challenged, label: 'Disputed', count: statusCounts[TaskStatus.Challenged] },
             { value: TaskStatus.Finalized, label: 'Finalized', count: statusCounts[TaskStatus.Finalized] },
             { value: TaskStatus.Slashed, label: 'Slashed', count: statusCounts[TaskStatus.Slashed] },
@@ -236,6 +239,7 @@ export default function TasksPage() {
                       <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-3xl ${
                         task.status === TaskStatus.Open ? 'bg-[#0071e3]' :
                         task.status === TaskStatus.Proposed ? 'bg-[#ff9f0a]' :
+                        task.status === TaskStatus.InReview ? 'bg-[#5856d6]' :
                         task.status === TaskStatus.Challenged ? 'bg-[#ff3b30]' :
                         task.status === TaskStatus.Finalized ? 'bg-[#34c759]' :
                         'bg-[#ff3b30]'

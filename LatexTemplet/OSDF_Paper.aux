@@ -1,0 +1,134 @@
+\relax 
+\citation{zhang2024edu}
+\citation{turnitin2024}
+\citation{aiken1994}
+\@writefile{toc}{\contentsline {section}{\numberline {1}引言}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}核心问题与技术挑战}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}核心问题}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}技术挑战}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}EduChain系统设计}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}整体架构}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces EduChain系统整体架构。自上而下分为四层：前端交互层（React TypeScript）、后端服务层（FastAPI + LLM Agent）、区块链层（Solidity合约 + Anvil本地链）、沙箱执行层（Foundry隔离验证环境）。}}{3}{}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:arch}{{1}{3}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}六阶段学术争议流水线}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces EduChain六阶段学术争议流水线。实线表示乐观路径（无争议，约占70\%交易），虚线表示争议路径（有挑战）。}}{3}{}\protected@file@percent }
+\newlabel{fig:pipeline}{{2}{3}{}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces 各阶段操作对应的链上状态变化}}{4}{}\protected@file@percent }
+\newlabel{tab:states}{{1}{4}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}经济模型与博弈论分析}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}提案者诚实约束}{4}{}\protected@file@percent }
+\newlabel{eq:min_stake}{{3}{4}{}{equation.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}挑战者参与约束}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}声誉系统的辅助约束}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 声誉系统参数}}{5}{}\protected@file@percent }
+\newlabel{tab:reputation}{{2}{5}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}质押的动态调整}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}关键组件实现}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}智能合约模块}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 核心合约关系。DisputeResolution是中枢合约，协调Registry（代理管理）、ArbitrationCommittee（仲裁）和StakeOracle（质押计算）。}}{5}{}\protected@file@percent }
+\newlabel{fig:contracts}{{3}{5}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}AI评审代理}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}沙箱隔离执行}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}前端监控与操作界面}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}实验评估}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}实验设置}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}主实验结果}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}质量评审精度对比}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces EduChain与Baseline的评审质量指标对比。EduChain在精度（0.89）和F1分数（0.87）上显著优于所有Baseline；召回率（0.85）与全量验证（B4, 0.86）接近但Gas消耗仅为后者的33\%。}}{7}{}\protected@file@percent }
+\newlabel{fig:security}{{4}{7}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Gas效率对比}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 各方案的Gas消耗对比。EduChain的Gas消耗约为全量验证（B4）的33\%，即降低了约67\%的链上存证开销。这是乐观执行设计的直接效果——约70\%的交易走乐观路径，避免了昂贵的沙箱验证重放。}}{7}{}\protected@file@percent }
+\newlabel{fig:efficiency}{{5}{7}{}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}各方案综合对比}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces 五维综合对比雷达图。EduChain在所有维度上表现均衡，没有明显的短板。B4在安全性维度接近EduChain但Gas效率极差；B1/B2在Gas效率上最优但缺乏争议可仲裁性（此项为零）。}}{7}{}\protected@file@percent }
+\newlabel{fig:radar}{{6}{7}{}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}消融实验}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 消融实验结果。完整EduChain（Full）在F1分数上最优。移除挑战者机制（w/o Challenger）导致召回率从0.85降至0.71；降低提案者评审强度（Weak Proposer）导致精度从0.89降至0.78。}}{8}{}\protected@file@percent }
+\newlabel{fig:ablation}{{7}{8}{}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}博弈论均衡验证}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 博弈论均衡验证。左图：不同质押水平下的诚实vs偷懒期望收益对比。当质押$>$2.857 ETH时，诚实收益高于偷懒。右图：不同$p_{detect}$下的最低质押需求曲线。}}{8}{}\protected@file@percent }
+\newlabel{fig:gametheory}{{8}{8}{}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Gas消耗分解}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces EduChain各操作Gas消耗分解。publishTask和submitProposal是最昂贵的操作（写入链上存储），commitScore/revealScore消耗适中，finalizeOptimistic消耗最低。}}{8}{}\protected@file@percent }
+\newlabel{fig:gas}{{9}{8}{}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}不同问题类型的细粒度检测能力}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces 各方案在不同问题类型上的F1分数对比。EduChain在所有8类问题上均优于单AI代理（B1）和多代理投票（B2），在代码逻辑混淆和约束违规等复杂问题类型上的优势尤为明显（分别领先B1约38.3\%和41.8\%）。传统查重工具（B3）在文本相似度匹配等简单模式问题上表现尚可，但在语义抄袭等深度理解型问题上几乎完全失效（F1=0.20）。}}{9}{}\protected@file@percent }
+\newlabel{fig:vuln_type}{{10}{9}{}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}可扩展性分析}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces 可扩展性分析。左图：吞吐量（每小时完成任务数）随并发任务数的变化。右图：每个任务的平均延迟。EduChain在高并发下维持了接近B1（无验证开销）的吞吐量，同时避免了B4（全量验证）因沙箱瓶颈导致的性能崩溃。}}{9}{}\protected@file@percent }
+\newlabel{fig:scalability}{{11}{9}{}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}抗女巫攻击经济分析}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces 抗女巫攻击分析。左图：不同攻击强度所需的最低经济成本。右图：随声誉增长，代理被选入仲裁委员会的概率变化（逻辑函数拟合）。}}{9}{}\protected@file@percent }
+\newlabel{fig:sybil}{{12}{9}{}{figure.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.9}不同LLM模型后端对比}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces 不同LLM后端在EduChain框架下的评审性能对比。所有模型均使用相同的EduChain协议和经济约束，仅替换后端LLM。GPT-4o在精度上略优于DeepSeek V4 Pro（0.91 vs 0.89），但两者在F1上接近（0.89 vs 0.87）。Claude Opus 4、kimi-k2-5和Qwen3 Max的性能依次递减，但均维持在可接受范围内。}}{10}{}\protected@file@percent }
+\newlabel{fig:cross_llm}{{13}{10}{}{figure.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.10}挑战窗口时长敏感性分析}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces 挑战窗口时长敏感性分析。检测率（F1）随窗口延长而单调递增但边际递减；挑战率随窗口延长近线性增长；标准化Gas成本随窗口延长线性增长（因更多任务走争议路径）。48小时标记为EduChain默认值，实现了检测率和效率的最佳平衡。}}{10}{}\protected@file@percent }
+\newlabel{fig:challenge_window}{{14}{10}{}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.11}验证者评分分布与防串通分析}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces 验证者机制分析。左图：50名验证者的评分分布直方图，正常验证者（蓝色）评分近似正态分布（$\mu \approx 72$），被标记的可疑串通簇（红色）集中在高分区域（$\mu \approx 95$），偏离群体均值超过2个标准差。红色虚线标记自动罚没阈值（30分），橙色虚线标记通过阈值（50分）。右图：commit-reveal三阶段防串通时间线示意。}}{11}{}\protected@file@percent }
+\newlabel{fig:verifier}{{15}{11}{}{figure.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.12}PoC编译器反馈循环有效性}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces PoC编译器反馈循环效果。展示首次尝试、一次重试后和两次重试后（最终）的PoC生成成功率。编译器反馈循环将整体成功率从首次尝试的59.4\%（平均）显著提升至最终成功率91.4\%。}}{11}{}\protected@file@percent }
+\newlabel{fig:poc_success}{{16}{11}{}{figure.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.13}参数敏感性分析}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces 参数敏感性分析。（a）最低质押随$p_{detect}$增加而单调递减；（b）审计成本差距越大，所需最低质押越高；（c）挑战者期望收益随罚没分配比例$\alpha $线性增长；（d）各事件的声誉变化量对比；（e）沙箱超时参数对问题覆盖率和误报率的影响；（f）仲裁委员会规模对攻击成功率的影响（对数坐标）。}}{12}{}\protected@file@percent }
+\newlabel{fig:param_sens}{{17}{12}{}{figure.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.14}各阶段时间开销分解}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces 各阶段时间开销分解。绿色为乐观路径（总耗时约28.4秒），红色为争议路径（总耗时约97.2秒，约为乐观路径的3.4倍）。争议路径的额外时间主要来自PoC生成（18.5秒）和沙箱重放（45.0秒）两个阶段。}}{12}{}\protected@file@percent }
+\newlabel{fig:time_breakdown}{{18}{12}{}{figure.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.15}代理声誉长期演化模拟}{12}{}\protected@file@percent }
+\citation{feist2019}
+\citation{mueller2018}
+\citation{luu2016}
+\citation{tsankov2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces 代理声誉演化模拟（50轮任务）。诚实提案者（绿色实线）的声誉稳步增长至约500；偷懒者（红色虚线）在第10轮和第25轮因被挑战和罚没而遭受两次-50声誉惩罚，最终声誉降至负数区域（面临注销）；成功挑战者（蓝色实线）因每次+20的奖励而快速积累声誉；学习型挑战者（粉色点线）在前期经历失败后逐渐改善策略。}}{13}{}\protected@file@percent }
+\newlabel{fig:reputation}{{19}{13}{}{figure.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.16}误报与漏报成因分析}{13}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces 检测质量分解分析。EduChain的正确检测率为0.89（即精度），误报率0.11（FP率），漏报率0.15（FN率 = 1 - 召回率）。与之相比，B1（单LLM）误报率达0.28，B3（传统工具）误报率高达0.39但漏报率最低（0.09）。}}{13}{}\protected@file@percent }
+\newlabel{fig:fp_fn}{{20}{13}{}{figure.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}相关工作}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}学术诚信保障}{13}{}\protected@file@percent }
+\citation{certora2023}
+\citation{hildenbrandt2018}
+\citation{openai2024}
+\citation{anthropic2024}
+\citation{chen2024smart}
+\citation{kung1981}
+\citation{optimism2023}
+\citation{arbitrum2023}
+\citation{bittensor2023}
+\citation{salek2024}
+\bibcite{luu2016}{1}
+\bibcite{tsankov2018}{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}乐观执行与争议解决}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}去中心化AI与经济激励}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}总结与展望}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}本文工作总结}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}未来方向}{14}{}\protected@file@percent }
+\bibcite{feist2019}{3}
+\bibcite{mueller2018}{4}
+\bibcite{certora2023}{5}
+\bibcite{hildenbrandt2018}{6}
+\bibcite{chen2024smart}{7}
+\bibcite{openai2024}{8}
+\bibcite{anthropic2024}{9}
+\bibcite{defillama2023}{10}
+\bibcite{immunefi2024}{11}
+\bibcite{dingman2023}{12}
+\bibcite{kung1981}{13}
+\bibcite{tu2013}{14}
+\bibcite{optimism2023}{15}
+\bibcite{arbitrum2023}{16}
+\bibcite{bittensor2023}{17}
+\bibcite{salek2024}{18}
+\bibcite{wood2014}{19}
+\bibcite{buterin2021}{20}
+\bibcite{nakamoto2008}{21}
+\bibcite{szabo1997}{22}
+\bibcite{goldberg2023}{23}
+\bibcite{chen2023}{24}
+\bibcite{eip712}{25}
+\gdef \@abspage@last{15}

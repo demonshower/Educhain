@@ -30,7 +30,6 @@ export interface ProposalInfo {
   evidenceCID: string;
   stake: bigint;
   timestamp: number;
-  scoreCount: number;
 }
 
 export interface ChallengeInfo {
@@ -283,8 +282,7 @@ export function useDisputeResolution({ provider, signer, chainId }: UseDisputeRe
         traceRoot: p.traceRoot,
         evidenceCID: p.evidenceCID,
         stake: p.stake,
-        timestamp: Number(p.timestamp),
-        scoreCount: Number(p.scoreCount),
+        timestamp: Number(p.submittedAt),
       };
     } catch { return null; }
   }, [getContract]);

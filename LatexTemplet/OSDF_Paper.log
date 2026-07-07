@@ -1,0 +1,992 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.7.1)  7 JUL 2026 12:08
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./OSDF_Paper.tex
+(OSDF_Paper.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(CjC.cls
+Document Class: CjC 2019/01/01 v0.1 CjC LaTeX Chinese template class
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(flushend.sty
+Package: flushend 
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+ (C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+) (C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(picins.sty Option `picins' Version 3.0 Sep. 1992, TH Darmstadt/HRZ
+\@BILD=\box53
+\@TEXT=\box54
+\d@breite=\dimen151
+\d@hoehe=\dimen152
+\d@xoff=\dimen153
+\d@yoff=\dimen154
+\d@shad=\dimen155
+\d@dash=\dimen156
+\d@boxl=\dimen157
+\d@pichskip=\dimen158
+\d@tmp=\dimen159
+\d@tmpa=\dimen160
+\d@bskip=\dimen161
+\hsiz@=\dimen162
+\p@getot@l=\dimen163
+\c@breite=\count279
+\c@hoehe=\count280
+\c@xoff=\count281
+\c@yoff=\count282
+\c@pos=\count283
+\c@shad=\count284
+\c@dash=\count285
+\c@boxl=\count286
+\c@zeilen=\count287
+\@changemode=\count288
+\c@piccaption=\count289
+\c@piccaptionpos=\count290
+\c@picpos=\count291
+\c@whole=\count292
+\c@half=\count293
+\c@tmp=\count294
+\c@tmpa=\count295
+\c@tmpb=\count296
+\c@tmpc=\count297
+\c@tmpd=\count298
+\d@leftskip=\skip51
+\ptoti=\dimen164
+\ptotii=\dimen165
+\env@box=\box55
+\d@envdp=\dimen166
+\c@hsize=\count299
+\c@envdp=\count300
+\d@envb=\dimen167
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/ccaption\ccaption.sty
+Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
+\@contcwidth=\skip52
+\@contindw=\skip53
+\abovelegendskip=\skip54
+\belowlegendskip=\skip55
+\c@newflo@tctr=\count301
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count302
+\calc@Bcount=\count303
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count304
+\calc@Cskip=\skip58
+)
+\CjC@linespace=\skip59
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
+\@cmidla=\count305
+\@cmidlb=\count306
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
+\@thisruleclass=\count307
+\@lastruleclass=\count308
+\@thisrulewidth=\dimen182
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip60
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen183
+))
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen184
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count309
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count310
+\leftroot@=\count311
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count312
+\DOTSCASE@=\count313
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box56
+\strutbox@=\box57
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen185
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count314
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count315
+\dotsspace@=\muskip18
+\c@parentequation=\count316
+\dspbrk@lvl=\count317
+\tag@help=\toks19
+\row@=\count318
+\column@=\count319
+\maxfields@=\count320
+\andhelp@=\toks20
+\eqnshift@=\dimen186
+\alignsep@=\dimen187
+\tagshift@=\dimen188
+\tagwidth@=\dimen189
+\totwidth@=\dimen190
+\lineht@=\dimen191
+\@envbody=\toks21
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip63
+\thm@postskip=\skip64
+\thm@headsep=\skip65
+\dth@everypar=\toks28
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count321
+\float@exts=\toks29
+\float@box=\box58
+\@float@everytoks=\toks30
+\@floatcapt=\box59
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen192
+\captionmargin=\dimen193
+\caption@leftmargin=\dimen194
+\caption@rightmargin=\dimen195
+\caption@width=\dimen196
+\caption@indent=\dimen197
+\caption@parindent=\dimen198
+\caption@hangindent=\dimen199
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\let \@conttempa \relax
+ \ifdim \prevdepth >-99\p@ \vskip \abovecaptionskip \else \def \@conttempa {\vb
+ox to\topskip {}}\fi \let \@contfnote \footnote \renewcommand {\footnote }[2][]
+{} \let \@contfmark \footnotemark \renewcommand {\footnotemark }[1][]{} \let \@
+contlabel \label \renewcommand {\label }[1]{} \sbox \@tempboxa {\@contnfont #1\
+@contdelim \@conttfont #2} \let \footnote \@contfnote \let \footnotemark \@cont
+fmark \let \label \@contlabel \ifdim \wd \@tempboxa <\linewidth \centering \fi 
+\if@contcw \centering \parbox {\@contcwidth }{\fi \if@conthang \sbox \@tempboxa
+ {\@contnfont #1\@contdelim } \@contpre {\@contnfont #1\@contdelim }\@conttempa
+ {\@contcstyle \hangindent =\wd \@tempboxa \hangafter =\@ne \@conttfont #2\par 
+} \else \if@contindent \@contpre {\@contnfont #1\@contdelim }\@conttempa {\@con
+tcstyle \hangindent =\@contindw \hangafter =\@ne \@conttfont #2\par } \else \@c
+ontpre {\@contnfont #1\@contdelim }\@conttempa {\@contcstyle \@conttfont #2\par
+ } \fi \fi \@contpost \if@contcw \par } \fi \vskip \belowcaptionskip  on input 
+line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count322
+\c@continuedfloat=\count323
+Package caption Info: float package is loaded.
+Package caption Info: picins package is loaded.
+) (C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen256
+\ar@mcellbox=\box60
+\extrarowheight=\dimen257
+\NC@list=\toks31
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box61
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip68
+\enit@outerparindent=\dimen258
+\enit@toks=\toks32
+\enit@inbox=\box62
+\enit@count@id=\count324
+\enitdp@description=\count325
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.sty
+
+LaTeX Warning: You have requested release `2026/06/01' of LaTeX,
+               but only release `2025-11-01' is available.
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex
+.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count326
+\g__pdfannot_backend_int=\count327
+\g__pdfannot_backend_link_int=\count328
+))
+Package: xeCJK 2026/06/23 v3.10.0 Typesetting CJK scripts with XeLaTeX
+ (C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctexhook.sty
+
+LaTeX Warning: You have requested release `2026/06/01' of LaTeX,
+               but only release `2025-11-01' is available.
+
+Package: ctexhook 2026/06/23 v2.6.0 Document and package hooks (CTEX)
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xtem
+plate.sty
+Package: xtemplate 2025-10-09 L3 Experimental prototype document functions
+)
+\l__xeCJK_tmp_int=\count329
+\l__xeCJK_tmp_box=\box63
+\l__xeCJK_tmp_dim=\dimen259
+\l__xeCJK_tmp_skip=\skip69
+\g__xeCJK_space_factor_int=\count330
+\l__xeCJK_begin_int=\count331
+\l__xeCJK_end_int=\count332
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip70
+\c__xeCJK_none_node=\count333
+\g__xeCJK_node_int=\count334
+\c__xeCJK_CJK_node_dim=\dimen260
+\c__xeCJK_CJK-space_node_dim=\dimen261
+\c__xeCJK_default_node_dim=\dimen262
+\c__xeCJK_CJK-widow_node_dim=\dimen263
+\c__xeCJK_normalspace_node_dim=\dimen264
+\c__xeCJK_default-space_node_skip=\skip71
+\l__xeCJK_ccglue_skip=\skip72
+\l__xeCJK_ecglue_skip=\skip73
+\g__xeCJK_par_guard_dim=\dimen265
+\l__xeCJK_punct_kern_skip=\skip74
+\l__xeCJK_indent_box=\box64
+\l__xeCJK_last_penalty_int=\count335
+\l__xeCJK_last_bound_dim=\dimen266
+\l__xeCJK_last_kern_dim=\dimen267
+\l__xeCJK_widow_penalty_int=\count336
+
+LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
+(template)           argument(s) on line 2625.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen268
+\l__xeCJK_mixed_punct_width_dim=\dimen269
+\l__xeCJK_middle_punct_width_dim=\dimen270
+\l__xeCJK_fixed_margin_width_dim=\dimen271
+\l__xeCJK_mixed_margin_width_dim=\dimen272
+\l__xeCJK_middle_margin_width_dim=\dimen273
+\l__xeCJK_bound_punct_width_dim=\dimen274
+\l__xeCJK_bound_margin_width_dim=\dimen275
+\l__xeCJK_margin_minimum_dim=\dimen276
+\l__xeCJK_kerning_total_width_dim=\dimen277
+\l__xeCJK_same_align_margin_dim=\dimen278
+\l__xeCJK_different_align_margin_dim=\dimen279
+\l__xeCJK_kerning_margin_width_dim=\dimen280
+\l__xeCJK_kerning_margin_minimum_dim=\dimen281
+\l__xeCJK_bound_dim=\dimen282
+\l__xeCJK_reverse_bound_dim=\dimen283
+\l__xeCJK_margin_dim=\dimen284
+\l__xeCJK_minimum_bound_dim=\dimen285
+\l__xeCJK_kerning_margin_dim=\dimen286
+\g__xeCJK_family_int=\count337
+\l__xeCJK_fam_int=\count338
+\g__xeCJK_fam_allocation_int=\count339
+\l__xeCJK_verb_case_int=\count340
+\l__xeCJK_verb_exspace_skip=\skip75
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.
+sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.s
+ty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count341
+\l__fontspec_language_int=\count342
+\l__fontspec_strnum_int=\count343
+\l__fontspec_tmp_int=\count344
+\l__fontspec_tmpa_int=\count345
+\l__fontspec_tmpb_int=\count346
+\l__fontspec_tmpc_int=\count347
+\l__fontspec_em_int=\count348
+\l__fontspec_emdef_int=\count349
+\l__fontspec_strong_int=\count350
+\l__fontspec_strongdef_int=\count351
+\l__fontspec_tmpa_dim=\dimen287
+\l__fontspec_tmpb_dim=\dimen288
+\l__fontspec_tmpc_dim=\dimen289
+ (C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+\l__xeCJK_default_char_int=\count352
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg
+File: xeCJK.cfg 2026/06/23 v3.10.0 Configuration file for xeCJK package
+))
+
+Package fontspec Info: 
+(fontspec)             Font family 'SimSun(0)' created for font 'SimSun' with
+(fontspec)             options
+(fontspec)             [Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;slant=0.167;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;embolden=4;slant
+=0.167;"
+
+
+(cuted.sty
+Package: cuted 2024/01/01
+)
+
+LaTeX Warning: Unused global option(s):
+    [10.5pt,journal].
+
+(OSDF_Paper.aux)
+\openout1 = `OSDF_Paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 48.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 48.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 48.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 48.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 48.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 48.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 48.
+LaTeX Font Info:    Redeclaring math accent \check on input line 48.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 48.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 48.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 48.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 48.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 48.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 48.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 48.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 48.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 48.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 48.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 48.
+LaTeX Font Info:    Calculating math sizes for size <10.53937> on input line 77
+.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 77.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 77.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+
+
+(C:\Users\123\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 77.
+
+[1
+
+
+]
+
+LaTeX Warning: Citation `zhang2024edu' on page 2 undefined on input line 105.
+
+
+LaTeX Warning: Citation `turnitin2024' on page 2 undefined on input line 107.
+
+
+LaTeX Warning: Citation `aiken1994' on page 2 undefined on input line 107.
+
+
+Overfull \vbox (3.67116pt too high) has occurred while \output is active []
+
+
+[2
+
+]
+Underfull \hbox (badness 3240) in paragraph at lines 167--168
+\TU/SimSun(0)/m/n/10.53937 后 端  |（端 口 \TU/lmr/m/n/10.53937 8000\TU/SimSun(0)/m/
+n/10.53937 ） 。|  核 心 组 件 包 括： （\TU/lmr/m/n/10.53937 1\TU/SimSun(0)/m/n/10.53937
+ ）|
+ []
+
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[3]
+Missing character: There is no ≥ in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+[]\TU/SimSun(0)/b/n/10.53937 争 议 仲 裁 路 径：|  \TU/SimSun(0)/m/n/10.53937 如 果 有 争 
+议，|
+ []
+
+
+Overfull \hbox (69.84805pt too wide) in paragraph at lines 209--222
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 244--245
+[]\TU/SimSun(0)/m/n/10.53937 为 确 保 诚 实 行 为 是 占 优 策 略，|  需 满 足
+ []
+
+
+Overfull \vbox (3.77054pt too high) has occurred while \output is active []
+
+
+[4]
+Missing character: There is no ≥ in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ↔ in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 1708) in paragraph at lines 313--313
+[]\TU/SimSun(0)/m/n/10.53937 图 \TU/lmr/m/n/10.53937 3: |\TU/SimSun(0)/m/n/10.53
+937 核 心 合 约 关 系。| \TU/lmr/m/n/10.53937 DisputeResolution \TU/SimSun(0)/m/n/10.5
+3937 是
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 313--313
+\TU/SimSun(0)/m/n/10.53937 中 枢 合 约，|  协 调 \TU/lmr/m/n/10.53937 Registry |\TU/Si
+mSun(0)/m/n/10.53937 （代 理 管 理） 、|
+ []
+
+Missing character: There is no ≥ in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 3138) in paragraph at lines 327--328
+[]\TU/lmr/m/n/10.53937 AI \TU/SimSun(0)/m/n/10.53937 评 审 代 理 由 \TU/lmr/m/n/10.5
+3937 Python \TU/SimSun(0)/m/n/10.53937 实 现，|  分 为
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 327--328
+\TU/SimSun(0)/m/n/10.53937 基 础 框 架  |（\TU/lmr/m/n/10.53937 audit_agent.py\TU/Si
+mSun(0)/m/n/10.53937 ）|  和 自 主 代 理
+ []
+
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+[]\TU/SimSun(0)/m/n/10.53937 自 主 代 理 包 含 两 个 关 键 辅 助 类：|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+[]\TU/SimSun(0)/m/n/10.53937 解 析 输 出：|  测 试 通 过
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 361--362
+\TU/lmr/m/n/10.53937 →CHALLENGE_UPHELD\TU/SimSun(0)/m/n/10.53937 ；|  测 试 失 败\TU
+/lmr/m/n/10.53937 /\TU/SimSun(0)/m/n/10.53937 超
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 379--380
+\TU/SimSun(0)/m/n/10.53937 环 境 下 运 行。| \TU/lmr/m/n/10.53937 LLM \TU/SimSun(0)/m
+/n/10.53937 推 理 使 用 \TU/lmr/m/n/10.53937 DeepSeek API
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+[]\TU/lmr/bx/n/10.53937 F1 Score\TU/SimSun(0)/b/n/10.53937 ：| $\OT1/cmr/m/n/10.
+95 2 \OMS/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 Precision \OMS/cmsy/m/n/10.95 
+^^B
+ []
+
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[6]
+File: figures/fig_osdf_security.png Graphic file (type bmp)
+<figures/fig_osdf_security.png>
+File: figures/fig_osdf_efficiency.png Graphic file (type bmp)
+<figures/fig_osdf_efficiency.png>
+File: figures/fig_osdf_radar.png Graphic file (type bmp)
+<figures/fig_osdf_radar.png>
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.96024pt too high) has occurred while \output is active []
+
+
+[7]
+File: figures/fig_osdf_ablation.png Graphic file (type bmp)
+<figures/fig_osdf_ablation.png>
+File: figures/fig_osdf_gametheory.png Graphic file (type bmp)
+<figures/fig_osdf_gametheory.png>
+File: figures/fig_osdf_gas.png Graphic file (type bmp)
+<figures/fig_osdf_gas.png>
+
+Underfull \hbox (badness 1472) in paragraph at lines 499--500
+\TU/SimSun(0)/m/n/10.53937 的 终 结 方 式  |（约 \TU/lmr/m/n/10.53937 45k Gas\TU/SimSu
+n(0)/m/n/10.53937 ） ，|  而 争 议 仲 裁
+ []
+
+File: figures/fig_vuln_type_breakdown.png Graphic file (type bmp)
+<figures/fig_vuln_type_breakdown.png>
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[8]
+File: figures/fig_scalability.png Graphic file (type bmp)
+<figures/fig_scalability.png>
+File: figures/fig_sybil_attack.png Graphic file (type bmp)
+<figures/fig_sybil_attack.png>
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[9]
+File: figures/fig_cross_llm.png Graphic file (type bmp)
+<figures/fig_cross_llm.png>
+File: figures/fig_challenge_window.png Graphic file (type bmp)
+<figures/fig_challenge_window.png>
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[10]
+File: figures/fig_verifier_analysis.png Graphic file (type bmp)
+<figures/fig_verifier_analysis.png>
+File: figures/fig_poc_success.png Graphic file (type bmp)
+<figures/fig_poc_success.png>
+File: figures/fig_param_sensitivity.png Graphic file (type bmp)
+<figures/fig_param_sensitivity.png>
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.67116pt too high) has occurred while \output is active []
+
+
+[11]
+File: figures/fig_time_breakdown.png Graphic file (type bmp)
+<figures/fig_time_breakdown.png>
+File: figures/fig_reputation_evolution.png Graphic file (type bmp)
+<figures/fig_reputation_evolution.png>
+
+Overfull \vbox (3.67116pt too high) has occurred while \output is active []
+
+
+[12]
+File: figures/fig_fp_fn_analysis.png Graphic file (type bmp)
+<figures/fig_fp_fn_analysis.png>
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[13]
+Underfull \hbox (badness 4739) in paragraph at lines 740--741
+[]\TU/SimSun(0)/m/n/10.53937 本 文 提 出 了 乐 观 语 义 争 议 执 行 框 架
+ []
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 768--771
+[]\TU/lmr/m/n/9.03374 Luu L, Chu D H, Olickel H, et al. Making
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 768--771
+\TU/lmr/m/it/9.03374 ACM SIGSAC Conference on Computer and
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 773--776
+[]\TU/lmr/m/n/9.03374 Tsankov P, Dan A, Drachsler-Cohen D, et al.
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 773--776
+\TU/lmr/m/n/9.03374 Securify: Practical security analysis of smart
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 773--776
+\TU/lmr/m/it/9.03374 Conference on Computer and Communications
+ []
+
+
+Overfull \vbox (3.77054pt too high) has occurred while \output is active []
+
+
+[14]
+
+Package fontspec Info: 
+(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options
+(fontspec)             [Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;slant=0.167;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;embolden=4;sla
+nt=0.167;"
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 788--791
+\TU/lmr/m/n/9.03374 smart contracts. \TU/lmr/m/it/9.03374 Technical Documentati
+on\TU/lmr/m/n/9.03374 , 2023.
+ []
+
+
+Underfull \hbox (badness 5133) in paragraph at lines 793--796
+\TU/lmr/m/n/9.03374 KEVM: A complete formal semantics of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--816
+[]\TU/lmr/m/n/9.03374 DeFiLlama. DeFi hacks and exploits
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--816
+\TU/lmr/m/n/9.03374 report 2023. \TU/lmr/m/it/9.03374 DeFiLlama Research\TU/lmr
+/m/n/9.03374 , 2024.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 818--821
+[]\TU/lmr/m/n/9.03374 Immunefi. Crypto losses in 2024:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 818--821
+\TU/lmr/m/n/9.03374 Quarterly report. \TU/lmr/m/it/9.03374 Immunefi Research\TU
+/lmr/m/n/9.03374 , 2024.
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 838--841
+[]\TU/lmr/m/n/9.03374 Optimism Collective. Optimism: The optimistic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 838--841
+\TU/lmr/m/n/9.03374 rollup. \TU/lmr/m/it/9.03374 Optimism Documentation\TU/lmr/
+m/n/9.03374 , 2023.
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 848--851
+[]\TU/lmr/m/n/9.03374 Bittensor Foundation. Bittensor: A peer-to-peer
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 848--851
+\TU/lmr/m/n/9.03374 intelligence market. \TU/lmr/m/it/9.03374 Bittensor Whitepa
+per\TU/lmr/m/n/9.03374 , 2023.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--861
+[]\TU/lmr/m/n/9.03374 Wood G. Ethereum: A secure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--861
+\TU/lmr/m/n/9.03374 decentralised generalised transaction
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--861
+\TU/lmr/m/n/9.03374 ledger. \TU/lmr/m/it/9.03374 Ethereum Yellow Paper\TU/lmr/m
+/n/9.03374 , 2014.
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 868--871
+[]\TU/lmr/m/n/9.03374 Nakamoto S. Bitcoin: A peer-to-peer electronic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 868--871
+\TU/lmr/m/n/9.03374 cash system. \TU/lmr/m/it/9.03374 Bitcoin Whitepaper\TU/lmr
+/m/n/9.03374 , 2008.
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 883--886
+[]\TU/lmr/m/n/9.03374 Chen W, Ma T, Zhang Y. A survey of smart
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--891
+[]\TU/lmr/m/n/9.03374 Ethereum Foundation. EIP-712: Typed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--891
+\TU/lmr/m/n/9.03374 structured data hashing and signing.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--891
+\TU/lmr/m/it/9.03374 Ethereum Improvement Proposals\TU/lmr/m/n/9.03374 , 2018.
+ []
+
+
+Overfull \hbox (2.33975pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Overfull \vbox (3.86989pt too high) has occurred while \output is active []
+
+
+[15] (OSDF_Paper.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026/06/23>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.41063pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9953 strings out of 402987
+ 251599 string characters out of 5448939
+ 706341 words of memory out of 5000000
+ 38533 multiletter control sequences out of 15000+600000
+ 631350 words of font info for 83 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 74i,9n,93p,1711b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on OSDF_Paper.pdf (15 pages).

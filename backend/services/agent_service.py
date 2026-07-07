@@ -180,6 +180,9 @@ class AgentService:
 
             poc_code = self._agent.generate_poc(task, vulnerability, request.target_contract)
 
+            if not poc_code:
+                return {"error": "LLM 返回空内容，请检查 API Key 和网络连接"}
+
             compilation_success = "pragma solidity" in poc_code and "test" in poc_code.lower()
 
             return {

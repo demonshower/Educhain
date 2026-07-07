@@ -46,7 +46,7 @@
     },
     "llm_config": {
         "model_type": "api",
-        "base_url": "https://api.deepseek.com/v1",
+        "base_url": "https://api.deepseek.com/anthropic",
         "api_key": "${LLM_API_KEY}",
         "model": "deepseek-chat",
         "model_path": "",
